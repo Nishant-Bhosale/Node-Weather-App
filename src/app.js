@@ -56,10 +56,6 @@ app.get("/weather", (req, res) => {
 			});
 		},
 	);
-	// res.send({
-	// 	forecast: "It is snowing",
-	// 	yourAddress: req.query.address,
-	// });
 });
 
 app.get("/help", (req, res) => {

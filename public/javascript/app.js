@@ -1,5 +1,3 @@
-console.log("Client side javascript message is loaded");
-
 const form = document.querySelector("form");
 const searchTerm = document.querySelector("input");
 const messageOne = document.getElementById("message-one");
