@@ -8,6 +8,7 @@ form.addEventListener("submit", (e) => {
 	console.log("hello");
 	const location = searchTerm.value;
 	messageOne.textContent = "Loading";
+	messageTwo.textContent = "";
 
 	fetch("/weather?address=" + location).then((response) => {
 		response

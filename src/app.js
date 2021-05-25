@@ -15,7 +15,7 @@ hbs.registerPartials(partialsPath);
 
 app.get("/", (req, res) => {
 	res.render("index", {
-		name: "Nishant",
+		name: "Created by Nishant Bhosale",
 		title: "Index Page",
 	});
 });
@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 app.get("/about", (req, res) => {
 	res.render("about", {
 		title: "About Page",
-		name: "Nishant",
+		name: "Created by Nishant Bhosale",
 	});
 });
 
@@ -61,7 +61,7 @@ app.get("/weather", (req, res) => {
 app.get("/help", (req, res) => {
 	res.render("help", {
 		helpText: "I am helping you out",
-		name: "Nishant",
+		name: "Created by Nishant Bhosale",
 		title: "Helping you",
 	});
 });
