@@ -9,21 +9,19 @@ form.addEventListener("submit", (e) => {
 	const location = searchTerm.value;
 	messageOne.textContent = "Loading";
 
-	fetch("http://localhost:3000/weather?address=" + location).then(
-		(response) => {
-			response
-				.json()
-				.then((res) => {
-					console.log(res);
-					messageOne.textContent = res.forecast;
-					messageTwo.textContent = res.location;
-					console.log(res.location);
-				})
-				.catch((error) => {
-					console.log(error);
-					messageOne.textContent = error;
-					messageTwo.textContent = "";
-				});
-		},
-	);
+	fetch("/weather?address=" + location).then((response) => {
+		response
+			.json()
+			.then((res) => {
+				console.log(res);
+				messageOne.textContent = res.forecast;
+				messageTwo.textContent = res.location;
+				console.log(res.location);
+			})
+			.catch((error) => {
+				console.log(error);
+				messageOne.textContent = error;
+				messageTwo.textContent = "";
+			});
+	});
 });
